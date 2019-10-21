@@ -60,7 +60,7 @@
 
 		}
 	}
-	
+
 	if(!$sucesso_login) adiciona_mensagem_status(MSG_TIPO_ERRO,"O email informado não está cadastrado ou a senha fornecida está incorreta.--- " . crypt("123456",PASSWORD_SALT));
 
 	 	 

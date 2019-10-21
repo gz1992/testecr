@@ -46,9 +46,9 @@
 					$res = executa_sql($sql);
 			}
 
-			$sql = "INSERT INTO produtos (prod_id, prod_ini_validade, prod_fim_validade, prod_nome, prod_forn, ";
+			$sql = "INSERT INTO produtos (prod_id, prod_prodt, prod_ini_validade, prod_fim_validade, prod_nome, prod_forn, ";
 			$sql.= "prod_unidade, prod_valor_compra, prod_valor_venda, prod_valor_venda_margem, prod_multiplo_venda, prod_descricao, prod_peso_bruto, prod_retornavel) ";
-			$sql.= " VALUES (". prep_para_bd($prod_id) . ", NOW(), '9999-12-31', ";
+			$sql.= " VALUES (". prep_para_bd($prod_id) . ", '1', NOW(), '2019-12-31', ";
 			$sql.= prep_para_bd($_REQUEST["prod_nome"]) . ", ";
 			$sql.= prep_para_bd($_REQUEST["prod_forn"]) . ", ";
 			$sql.= prep_para_bd($_REQUEST["prod_unidade"]) . ", ";
@@ -69,7 +69,7 @@
 			 }
 			 else
 			 {
-				adiciona_mensagem_status(MSG_TIPO_ERRO,"Erro ao tentar salvar informações do produto " . $_REQUEST["prod_nome"] . ".");				 
+				adiciona_mensagem_status(MSG_TIPO_ERRO,"Erro ao tentar salvar informações do produto " . $_REQUEST["prod_nome"] . ". \n $sql");				 
 			 }
 			 escreve_mensagem_status();
 			 

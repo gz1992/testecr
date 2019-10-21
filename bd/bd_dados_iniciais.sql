@@ -16,7 +16,7 @@ INSERT INTO `nucleos` (`nuc_id`, `nuc_nome_curto`, `nuc_nome_completo`, `nuc_ema
 (1, 'Núcleo Teste', 'Nucleo Teste Início Sistema', 'nucleo@mudar.com', '10h às 12h', 'Rua Tal, 123 - Bairro', 0);
 
 INSERT INTO `usuarios` (`usr_id`, `usr_nuc`, `usr_associado`, `usr_email`, `usr_email_alternativo`, `usr_senha`, `usr_nome_curto`, `usr_nome_completo`, `usr_endereco`, `usr_contatos`, `usr_desde`, `usr_archive`) VALUES
-(1, 1, 1, 'admin@mudar.com', '', '', 'Administrador', 'Administrador Inicial Sistema', '', '1234-5678', NULL, 0);
+(1, 1, 1, 'gzaican@gmail.com', '', 'teMGKvBPcptKo', 'Administrador', 'Administrador Inicial Sistema', '', '1234-5678', NULL, 0);
 
 INSERT INTO `usuariopapeis` (`usrp_usr`, `usrp_pap`, `usrp_por_usr`) VALUES
 (1, 1, 1);
@@ -46,3 +46,5 @@ INSERT INTO `textos` (`txt_id`, `txt_modo_html`, `txt_nome_curto`, `txt_nome_com
 (4, 0, 'txt_email_final_confirmacao', 'Texto utilizado no final do email de confirmação do pedido, logo após informar horário / local de entrega.', 'Vale Lembrar:\r\n\r\nSe as encomendas não forem buscadas, o consumidor pagará pelos produtos encomendados. Haverá tentativa de repasse a outros cestantes.\r\n\r\nPor favor leve suas bolsas, sacolas de pano, caixas de papelão, caixas de ovos e dinheiro trocado ou cheque para facilitar na entrega dos produtos.\r\n\r\n\r\nUm abraço!\r\nRede Ecológica', 'Vale Lembrar:\r\n\r\nSe as encomendas não forem buscadas, o consumidor pagará pelos produtos encomendados. Haverá tentativa de repasse a outros cestantes.\r\n\r\nPor favor leve suas bolsas, sacolas de pano, caixas de papelão, caixas de ovos e dinheiro trocado ou cheque para facilitar na entrega dos produtos.\r\n\r\n\r\nUm abraço!\r\nRede Ecológica', 1),
 (5, 0, 'txt_email_final_info_conta', 'Texto utilizado no final dos emails relacionados à criação de conta / senha.', 'Saudações e até o futuro,\r\nComissão de Pedidos da Rede Ecológica\r\ncomissaopedidos@gmail.com', 'Saudações e até o futuro,\r\nComissão de Pedidos da Rede Ecológica\r\ncomissaopedidos@gmail.com', 1);
 
+
+INSERT INTO produtos (prod_id, prod_prodt, prod_ini_validade, prod_fim_validade, prod_nome, prod_forn, prod_unidade, prod_valor_compra, prod_valor_venda, prod_valor_venda_margem, prod_multiplo_venda, prod_descricao, prod_peso_bruto, prod_retornavel) VALUES ('1', '1', NOW(), '2019-12-31', 'Alface', '1', '1', '1', '3', '2', '1', '', '100', '0');
